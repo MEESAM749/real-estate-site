@@ -1,0 +1,231 @@
+/* =========================================
+   ABOUT PAGE STYLES
+   ========================================= */
+
+/* --- Intro Section --- */
+.about-intro {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.est-title {
+    font-family: 'Urbanist', sans-serif;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.cursive-subtitle {
+    font-family: 'Great Vibes', cursive;
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-top: -10px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* --- Stats Row & Brackets --- */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    position: relative;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-badge {
+    position: absolute;
+    top: -30px;
+    background: linear-gradient(135deg, #3B7EEC, #3BB3EC);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--white);
+    border: 3px solid var(--black);
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    z-index: 1;
+}
+
+/* Gold Brackets Effect */
+.stat-brackets {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 4px dashed var(--primary);
+    border-right: 4px dashed var(--primary);
+    border-radius: 40px;
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
+.stat-brackets::before, .stat-brackets::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: var(--black);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.stat-brackets::before { top: -2px; }
+.stat-brackets::after { bottom: -2px; }
+
+/* --- Feature Image --- */
+.feature-image-box {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.feature-image-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: #d9d9d9;
+    border-radius: 0;
+}
+
+/* --- Founder Section --- */
+.founder-section {
+    margin-bottom: 100px;
+}
+
+.founder-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.founder-image {
+    flex: 0 0 300px;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -10px 10px 0px var(--white);
+}
+
+.founder-info {
+    flex: 1;
+}
+
+.role-badge {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.founder-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.founder-bio {
+    color: var(--primary);
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+/* --- Team Section --- */
+.team-section {
+    padding-bottom: 80px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.team-img-col {
+    width: 40%;
+}
+
+.team-img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info-col {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--black);
+}
+
+.team-info-col h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.team-info-col .designation {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.team-contact p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* --- About Page Responsive --- */
+@media (max-width: 768px) {
+    .stats-row { gap: 50px; }
+    .founder-grid { flex-direction: column; text-align: center; }
+    .founder-bio { margin: 0 auto; }
+    .team-card { flex-direction: column; width: 300px; }
+    .team-img-col, .team-info-col { width: 100%; }
+    .team-img-col { height: 250px; }
+}
