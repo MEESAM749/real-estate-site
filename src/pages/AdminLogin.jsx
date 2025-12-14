@@ -1,8 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 import '../styles/admin-login.css';
 
 const AdminLogin = () => {
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        // TODO: Implement actual authentication here
+        navigate('/admin-dashboard');
+    };
+
     return (
         <section className="admin-section">
             <SEO title="Admin Login - Al Rafay Associates" />
@@ -10,7 +19,7 @@ const AdminLogin = () => {
                 <h1 className="section-title">Admin Login</h1>
                 <p className="login-subtitle">Welcome back. Please enter your details.</p>
 
-                <form className="admin-form">
+                <form className="admin-form" onSubmit={handleLogin}>
                     <div className="form-group">
                         <label htmlFor="username">Username or ID</label>
                         <input type="text" id="username" placeholder="Enter your username" />
