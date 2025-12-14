@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Listings from './pages/Listings';
 import Contact from './pages/Contact';
-import Admin from './pages/Admin';
+import AdminLogin from './pages/AdminLogin';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="listings" element={<Listings />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="admin" element={<Admin />} />
+        <Route path="admin-login" element={<AdminLogin />} />
       </Route>
     </Routes>
   );

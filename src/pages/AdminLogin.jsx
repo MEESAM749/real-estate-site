@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/admin.css';
+import '../styles/admin-login.css';
 
-const Admin = () => {
+const AdminLogin = () => {
     return (
         <section className="admin-section">
             <div className="login-container">
@@ -33,4 +33,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default AdminLogin;
