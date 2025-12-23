@@ -17,7 +17,7 @@ function App() {
         <Route path="listings" element={<Listings />} />
         <Route path="contact" element={<Contact />} />
         <Route path="admin-login" element={<AdminLogin />} />
-        <Route //protected route for unauthorized access
+        <Route //protected route for unauthorized access.
           path="admin-dashboard"
           element={
             <ProtectedRoute>
